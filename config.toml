@@ -6,6 +6,7 @@ theme = "minimal"
 #googleAnalytics = ""
 
 [params]
+    baseURL = "https://sergiomcalzada.github.io/"
     author = "Sergio Moreno Calzada"
     description = "Personal blog theme powered by Hugo"
     githubUsername = "#sergiomcalzada"
