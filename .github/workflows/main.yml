@@ -3,28 +3,28 @@ name: github pages
 on:
   push:
     branches:
-      - master
+      - hugo
 
 jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-        # with:
-        #   submodules: true
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v2.3.2
         with:
-          hugo-version: '0.62.2'
-          extended: true
+          hugo-version: "latest"
 
       - name: Build
-        run: hugo --minify
+        run: hugo --gc --minify --cleanDestinationDir
+
+      - name: Feed Fix
+        run: cp ./public/posts/feed.xml ./public/feed.xml
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v2.3.2
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
+          PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
