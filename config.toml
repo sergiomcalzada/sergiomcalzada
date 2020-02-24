@@ -7,39 +7,40 @@ theme = "soho"
 summarylength = 10
 enableEmoji = true
 
+[permalinks]
+  posts = "/:year/:month/:day/:title/"
+
 [params]
-    baseURL = "https://sergiomcalzada.github.io/"
-    author = "Sergio Moreno Calzada"
-    gravatar = "sergio.m.calzada@gmail.com"
-    description = ""
-    githubUsername = "#sergiomcalzada"
-    copyright = "Sergio Moreno"
-    license = "CC BY-SA 4.0"
-    licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
-## Set custom theme color.
-# themeColor = "#fc2803"
+  baseURL = "https://sergiomcalzada.github.io/"
+  author = "Sergio Moreno Calzada"
+  gravatar = "sergio.m.calzada@gmail.com"
+  description = "Developer, dreamer and cloud lover"
+  githubUsername = "#sergiomcalzada"
+  copyright = "Sergio Moreno"
+  license = "CC BY-SA 4.0"
+  licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+  ## Set custom theme color.
+  # themeColor = "#fc2803"
 
-## Set custom CSS and/or JS to override site defaults.
-#customCss = ["css/blog.css"]
-#customJs = ["js/blog.js"]
+  ## Set custom CSS and/or JS to override site defaults.
+  #customCss = ["css/blog.css"]
+  #customJs = ["js/blog.js"]
+  [[params.socialIcons]]
+    icon = "fa-github"
+    title = "GitHub"
+    url = "https://github.com/sergiomcalzada/"
 
-[[params.socialIcons]]
-  icon = "fa-github"
-  title = "GitHub"
-  url = "https://github.com/sergiomcalzada/"
+  [[params.socialIcons]]
+    icon = "fa-twitter"
+    title = "Twitter"
+    url = "https://twitter.com/sergiomcalzada/"
 
-[[params.socialIcons]]
-  icon = "fa-twitter"
-  title = "Twitter"
-  url = "https://twitter.com/sergiomcalzada/"
-
-[[params.socialIcons]]
-  icon = "fa-linkedin"
-  title = "Linkedin"
-  url = "https://www.linkedin.com/in/sergiomcalzada/"
+  [[params.socialIcons]]
+    icon = "fa-linkedin"
+    title = "Linkedin"
+    url = "https://www.linkedin.com/in/sergiomcalzada/"
 
 [menu]
-
   [[menu.main]]
   name = "Posts"
   weight = 100
@@ -53,7 +54,6 @@ enableEmoji = true
   url = "/about/"
 
 [markup]
-
   [markup.highlight]
   codeFences = true
   guessSyntax = false
